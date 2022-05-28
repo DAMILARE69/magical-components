@@ -25,11 +25,13 @@ export const MFIELD = styled.div.attrs((props) => ({
     (props.hasShadow === 10 && "rgba(0, 0, 0, 0.45) 0px 25px 20px -20px") ||
     props.hasShadow,
   direction:
-    (props.direction === "upDown" && " column") ||
+    (props.direction === "upDown" && "column") ||
     (props.direction === "sideSide" && "row"),
   rounded: props.rounded ? "9999px" : "5px",
   focusIndicatorColor: props.focusIndicatorColor || props.variantColor,
 }))`
+  width: ${(props) => props.size?.width};
+  height: ${(props) => props.size?.height};
   display: flex;
   gap: 2px;
   flex-direction: ${(props) => props.direction};
@@ -39,7 +41,7 @@ export const MFIELD = styled.div.attrs((props) => ({
   outline: solid 1px ${(props) => props.variantColor};
   &:hover {
     box-shadow: none;
-    outline: solid 1px ${(props) => props.hoverColor || theme.depthColor};
+    outline: solid 1px ${(props) => props.hoverColor || "#343A40"};
   }
   &:focus-within {
     box-shadow: none;
@@ -58,11 +60,12 @@ export const MFIELD = styled.div.attrs((props) => ({
 export const MFiedlInput = styled.input`
   background-color: transparent;
   font-size: 1rem;
+  flex: 1;
   color: ${(props) => props.color};
   &:-internal-autofill-selected {
     appearance: menulist button;
     background-image: none !important;
-    color: ${(props) => props.color} !important;
-    background-color: transparent !important;
+    color: greenyellow !important;
+    background-color: red !important;
   }
 `;

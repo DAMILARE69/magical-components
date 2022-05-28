@@ -5,7 +5,7 @@ import { theme } from "../../../theme";
 export function MField({
   focusIndicatorColor,
   variant = "text",
-  variantColor = theme.depthColorTwo,
+  variantColor = "#495057",
   placehold = "Mfield......",
   className,
   hasShadow = 2,
@@ -15,9 +15,11 @@ export function MField({
   direction = "upDown",
   label = "Mfield Label",
   event,
+  size = { width: "100%", height: "48px" },
 }) {
   return (
     <MFIELD
+      size={size}
       direction={direction}
       hoverColor={hoverColor}
       rounded={rounded}
@@ -49,4 +51,5 @@ MFIELD.propTypes = {
   label: PropTypes.string,
   event: PropTypes.func,
   direction: PropTypes.oneOf(["upDown", "sideSide"]),
+  size: PropTypes.exact({ width: PropTypes.string, height: PropTypes.string }),
 };
