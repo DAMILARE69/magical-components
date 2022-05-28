@@ -1,6 +1,5 @@
-import { MFiedlInput, MFIELD } from "./MFieldStyles";
+import { MFiedlInput, MFIELD, MFIELDCONTAINER } from "./MFieldStyles";
 import PropTypes from "prop-types";
-import { theme } from "../../../theme";
 
 export function MField({
   focusIndicatorColor,
@@ -19,32 +18,33 @@ export function MField({
   size = { width: "100%", height: "48px" },
 }) {
   return (
-    <MFIELD
-      size={size}
-      direction={direction}
-      hoverColor={hoverColor}
-      rounded={rounded}
-      hasShadow={hasShadow}
-      className={className}
-      variantColor={variantColor}
-      focusIndicatorColor={focusIndicatorColor}
-    >
-      {label && <small>{label}</small>}
-      <MFiedlInput
-        onChange={event}
-        color={color}
-        type={variant}
-        placeholder={placehold}
-      />
+    <MFIELDCONTAINER size={size} variantColor={variantColor}>
+      <MFIELD
+        direction={direction}
+        hoverColor={hoverColor}
+        rounded={rounded}
+        hasShadow={hasShadow}
+        className={className}
+        variantColor={variantColor}
+        focusIndicatorColor={focusIndicatorColor}
+      >
+        {label && <small>{label}</small>}
+        <MFiedlInput
+          onChange={event}
+          color={color}
+          type={variant}
+          placeholder={placehold}
+        />
+      </MFIELD>
       {helperText && <em>{helperText}</em>}
-    </MFIELD>
+    </MFIELDCONTAINER>
   );
 }
 MFIELD.propTypes = {
   focusIndicatorColor: PropTypes.string,
   variant: PropTypes.oneOf(["text", "email", "search", "password"]),
   variantColor: PropTypes.string,
-  placehold: PropTypes.string.isRequired,
+  placehold: PropTypes.string,
   className: PropTypes.string,
   hasShadow: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
   rounded: PropTypes.bool,

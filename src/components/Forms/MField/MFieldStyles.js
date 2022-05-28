@@ -1,6 +1,20 @@
 import styled from "styled-components";
 import { theme } from "../../../theme";
 
+export const MFIELDCONTAINER = styled.div`
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 5px;
+  width: ${(props) => props.size?.width};
+  height: ${(props) => props.size?.height};
+  &:focus-within em {
+    color: ${(props) => props.variantColor || theme.brandColor};
+  }
+  & em {
+    font-size: 10px;
+  }
+`;
 export const MFIELD = styled.div.attrs((props) => ({
   variantColor:
     (props.variantColor === "success" && theme.success) ||
@@ -30,8 +44,8 @@ export const MFIELD = styled.div.attrs((props) => ({
   rounded: props.rounded ? "9999px" : "5px",
   focusIndicatorColor: props.focusIndicatorColor || props.variantColor,
 }))`
-  width: ${(props) => props.size?.width};
-  height: ${(props) => props.size?.height};
+  width: 100%;
+  height: 100%;
   display: flex;
   gap: 2px;
   flex-direction: ${(props) => props.direction};
