@@ -10,6 +10,7 @@ export function MField({
   className,
   hasShadow = 2,
   rounded,
+  helperText = "MField Helder Text",
   color,
   hoverColor,
   direction = "upDown",
@@ -35,6 +36,7 @@ export function MField({
         type={variant}
         placeholder={placehold}
       />
+      {helperText && <em>{helperText}</em>}
     </MFIELD>
   );
 }
@@ -49,6 +51,7 @@ MFIELD.propTypes = {
   color: PropTypes.string,
   hoverColor: PropTypes.string,
   label: PropTypes.string,
+  helperText: PropTypes.string,
   event: PropTypes.func,
   direction: PropTypes.oneOf(["upDown", "sideSide"]),
   size: PropTypes.exact({ width: PropTypes.string, height: PropTypes.string }),

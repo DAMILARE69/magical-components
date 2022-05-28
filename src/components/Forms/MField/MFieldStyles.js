@@ -50,10 +50,12 @@ export const MFIELD = styled.div.attrs((props) => ({
     outline-width: 1px;
     outline-color: ${(props) => props.focusIndicatorColor};
   }
-  &:focus-within small {
+  &:focus-within small,
+  em {
     color: ${(props) => props.variantColor || theme.brandColor};
   }
-  & small {
+  & small,
+  em {
     font-size: 10px;
   }
 `;
