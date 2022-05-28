@@ -14,6 +14,7 @@ export function MField({
   hoverColor,
   direction = "upDown",
   label = "Mfield Label",
+  labelColor,
   event,
   size = { width: "100%", height: "48px" },
 }) {
@@ -28,7 +29,7 @@ export function MField({
         variantColor={variantColor}
         focusIndicatorColor={focusIndicatorColor}
       >
-        {label && <small>{label}</small>}
+        {label && <small labelColor={labelColor}>{label}</small>}
         <MFiedlInput
           onChange={event}
           color={color}
@@ -43,6 +44,7 @@ export function MField({
 MFIELD.propTypes = {
   focusIndicatorColor: PropTypes.string,
   variant: PropTypes.oneOf(["text", "email", "search", "password"]),
+  labelColor: PropTypes.string,
   variantColor: PropTypes.string,
   placehold: PropTypes.string,
   className: PropTypes.string,

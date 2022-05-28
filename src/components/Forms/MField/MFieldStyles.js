@@ -66,7 +66,7 @@ export const MFIELD = styled.div.attrs((props) => ({
   }
   &:focus-within small,
   em {
-    color: ${(props) => props.variantColor || theme.brandColor};
+    color: ${(props) => props.variantColor || props.labelColor};
   }
   & small,
   em {
