@@ -1,0 +1,37 @@
+{
+  "name": "magical-components",
+  "version": "1.0.1",
+  "description": " magical is a react ui component library created for my grandma and now she is a magician all thanks to magical ui library 😁🤣",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "magical.com"
+  },
+  "keywords": [
+    "magical",
+    "magical-ui",
+    "magical-components",
+    "components",
+    "componentlibrary",
+    "react",
+    "reactjs",
+    "react-dom",
+    "component-library",
+    "grand-ma-ui"
+  ],
+  "author": "Damilare",
+  "license": "MIT",
+  "devDependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "styled-components": "^5.3.5"
+  },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
