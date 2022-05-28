@@ -1,8 +1,8 @@
 {
   "name": "magical-components",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": " magical is a react ui component library created for my grandma and now she is a magician all thanks to magical ui library 😁🤣",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,8 +27,7 @@
   "devDependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "styled-components": "^5.3.5"
+    "react-dom": "^18.1.0"
   },
   "peerDependencies": {
     "react": "^18.1.0",
